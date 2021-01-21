@@ -23,7 +23,7 @@ _install() {
     fi
 
     # copy vimrc's
-    if ! cp -av configs/*.{vim,json} ~/; then
+    if ! cp -av configs/*.{vim,json} ~/.config/nvim/; then
         echo "error on copy the vimrcs to home"
         return 1
     fi
