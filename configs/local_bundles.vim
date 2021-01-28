@@ -14,6 +14,8 @@ Plug 'tpope/vim-sensible'
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
-
 " A plpgsql plug
 Plug 'lifepillar/pgsql.vim'
+
+" A async rust racer completer plug
+Plug 'keremc/asyncomplete-racer.vim'

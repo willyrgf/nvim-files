@@ -32,9 +32,20 @@ let g:go_updatetime = 1500
 set noswapfile
 set updatetime=100
 
+" asyncomplete configs
+" allow modifying the completeopt variable, or it will
+" be overridden all the time
+let g:asyncomplete_auto_completeopt = 0
+set completeopt=menuone,noinsert,noselect,preview
+
 " go
 au FileType go nmap <Leader>dh <Plug>(go-def)
 au FileType go let g:asyncomplete_auto_popup = 0
+
+" rust
+"au FileType rust let g:asyncomplete_auto_popup = 0
+autocmd User asyncomplete_setup call asyncomplete#register_source(
+    \ asyncomplete#sources#racer#get_source_options())
 
 " python
 let g:ale_fix_on_save = 1
