@@ -12,7 +12,7 @@ Plug 'tpope/vim-sensible'
 "" https://github.com/neoclide/coc.nvim
 "" Use release branch
 "Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " A plpgsql plug
 Plug 'lifepillar/pgsql.vim'
