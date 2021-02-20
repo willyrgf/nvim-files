@@ -15,6 +15,13 @@ neovim >= 0.3.2 [how-to install here](https://github.com/neovim/neovim/wiki/Inst
 sudo snap install nvim --classic
 ```
 
+rust-analyzer
+```sh
+# add on your $PATH the ~/.local/bin/
+curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/rust-analyzer-linux -o ~/.local/bin/rust-analyzer
+chmod +x ~/.local/bin/rust-analyzer
+```
+
 ### For install
 ```sh
 git clone https://github.com/willyrgf/nvim-files/ ~/nvim-files/

@@ -42,11 +42,6 @@ set completeopt=menuone,noinsert,noselect,preview
 au FileType go nmap <Leader>dh <Plug>(go-def)
 au FileType go let g:asyncomplete_auto_popup = 0
 
-" rust
-"au FileType rust let g:asyncomplete_auto_popup = 0
-autocmd User asyncomplete_setup call asyncomplete#register_source(
-    \ asyncomplete#sources#racer#get_source_options())
-
 " python
 let g:ale_fix_on_save = 1
 let g:ale_linters = { 'python': [ 'flake8', 'pydocstyle', 'bandit', 'mypy' ] }

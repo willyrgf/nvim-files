@@ -33,6 +33,11 @@ _install() {
         echo "error on install vim plugins"
         return 1
     fi
+
+    if ! nvim +:CocInstall coc-rust-analyzer +q +q; then
+        echo "error on install coc install"
+        return 1
+    fi
 }
 
 _post_install() {
