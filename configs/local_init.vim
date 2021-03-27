@@ -42,6 +42,11 @@ set completeopt=menuone,noinsert,noselect,preview
 au FileType go nmap <Leader>dh <Plug>(go-def)
 au FileType go let g:asyncomplete_auto_popup = 0
 
+"" rust
+""au FileType rust let g:asyncomplete_auto_popup = 0
+"autocmd User asyncomplete_setup call asyncomplete#register_source(
+"    \ asyncomplete#sources#racer#get_source_options())
+
 " python
 let g:ale_fix_on_save = 1
 let g:ale_linters = { 'python': [ 'flake8', 'pydocstyle', 'bandit', 'mypy' ] }
@@ -78,6 +83,9 @@ set background=dark
 
 " set a default sql type to plug
 let g:sql_type_default = 'pgsql'
+
+" plugin: fzf some configs
+nnoremap <silent> <Leader>f :Rg<CR>
 
 
 " -------------------------------------------------------------------------------------------------
@@ -127,22 +135,22 @@ nnoremap <silent> U :call <SID>show_documentation()<CR>
 " Remap for rename current word
 nmap <leader>rn <Plug>(coc-rename)
 
-" Remap for format selected region
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
-" Show all diagnostics
-nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
-" Manage extensions
-nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
-" Show commands
-nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
-" Find symbol of current document
-nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
-" Search workspace symbols
-nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
-" Do default action for next item.
-nnoremap <silent> <space>j  :<C-u>CocNext<CR>
-" Do default action for previous item.
-nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
-" Resume latest coc list
-nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+""" Remap for format selected region
+"vmap <leader>f  <Plug>(coc-format-selected)
+"nmap <leader>f  <Plug>(coc-format-selected)
+"" Show all diagnostics
+"nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+"" Manage extensions
+"nnoremap <silent> <space>e  :<C-u>CocList extensions<cr>
+"" Show commands
+"nnoremap <silent> <space>c  :<C-u>CocList commands<cr>
+"" Find symbol of current document
+"nnoremap <silent> <space>o  :<C-u>CocList outline<cr>
+"" Search workspace symbols
+"nnoremap <silent> <space>s  :<C-u>CocList -I symbols<cr>
+"" Do default action for next item.
+"nnoremap <silent> <space>j  :<C-u>CocNext<CR>
+"" Do default action for previous item.
+"nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
+"" Resume latest coc list
+"nnoremap <silent> <space>p  :<C-u>CocListResume<CR>

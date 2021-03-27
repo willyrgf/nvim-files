@@ -17,3 +17,5 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " A plpgsql plug
 Plug 'lifepillar/pgsql.vim'
 
+" A async rust racer completer plug
+"Plug 'keremc/asyncomplete-racer.vim'
