@@ -22,6 +22,15 @@ curl -L https://github.com/rust-analyzer/rust-analyzer/releases/latest/download/
 chmod +x ~/.local/bin/rust-analyzer
 ```
 
+- elixir-ls
+```sh
+git clone git@github.com:elixir-lsp/elixir-ls.git ~/.elixir-ls
+cd ~/.elixir-ls
+mix deps.get
+mix compile
+MIX_ENV=prod mix elixir_ls.release
+```
+
 - git 
 - ctags 
 - curl 

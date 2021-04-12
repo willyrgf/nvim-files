@@ -4,6 +4,12 @@
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
+    },
+    "elixir": {
+      "pathToElixirLS": "~/.elixir-ls/release/language_server.sh",
+      "command": "~/.elixir-ls/release/language_server.sh",
+      "filetypes": ["elixir", "eelixir"],
+        "dialyzerEnabled": true,
     }
   }
 }
