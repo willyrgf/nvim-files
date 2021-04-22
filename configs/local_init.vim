@@ -18,14 +18,6 @@ let g:multi_cursor_prev_key            = '<C-p>'
 let g:multi_cursor_skip_key            = '<C-x>'
 let g:multi_cursor_quit_key            = '<Esc>'
 
-" golang customization
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-let g:go_auto_type_info = 1
-let g:go_auto_sameids = 0
-let g:go_def_mapping_enabled = 0
-let g:go_updatetime = 1500
-
 " custom configs
 "
 " general
@@ -41,6 +33,21 @@ set completeopt=menuone,noinsert,noselect,preview
 " go
 au FileType go nmap <Leader>dh <Plug>(go-def)
 au FileType go let g:asyncomplete_auto_popup = 0
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_generate_tags = 1
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+let g:go_auto_type_info = 1
+let g:go_auto_sameids = 0
+let g:go_def_mapping_enabled = 0
+let g:go_updatetime = 1500
+
 
 "" rust
 ""au FileType rust let g:asyncomplete_auto_popup = 0
@@ -87,6 +94,8 @@ let g:sql_type_default = 'pgsql'
 " plugin: fzf some configs
 nnoremap <silent> <Leader>f :Rg<CR>
 
+let g:rehash256 = 1
+colorscheme molokai
 
 " -------------------------------------------------------------------------------------------------
 " coc.nvim default settings

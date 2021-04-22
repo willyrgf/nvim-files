@@ -19,3 +19,6 @@ Plug 'lifepillar/pgsql.vim'
 
 " A async rust racer completer plug
 "Plug 'keremc/asyncomplete-racer.vim'
+"
+" a fork of old molokai
+Plug 'fatih/molokai'
