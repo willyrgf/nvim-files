@@ -30,8 +30,27 @@ set updatetime=100
 let g:asyncomplete_auto_completeopt = 0
 set completeopt=menuone,noinsert,noselect,preview
 
+" NERDTree things
+nmap <leader>n :NERDTreeToggle<cr>
+nmap <leader>nf :NERDTreeFind<cr>
+
+" CtrlP path fuzzy test
+nnoremap <silent> <leader>e :CtrlP<CR>
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
+let g:ctrlp_open_new_file = 'v'
+let g:ctrlp_mruf_relative = 1
+
+
+
+
 " go
 au FileType go nmap <Leader>dh <Plug>(go-def)
+au FileType go nmap <leader>tf :GoTestFunc<cr>
 au FileType go let g:asyncomplete_auto_popup = 0
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
@@ -133,6 +152,7 @@ nmap <silent> [c <Plug>(coc-diagnostic-prev)
 nmap <silent> ]c <Plug>(coc-diagnostic-next)
 
 " Remap keys for gotos
+nmap <leader>gd <Plug>(coc-definition)
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)

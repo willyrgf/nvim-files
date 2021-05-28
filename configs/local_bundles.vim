@@ -22,3 +22,5 @@ Plug 'lifepillar/pgsql.vim'
 "
 " a fork of old molokai
 Plug 'fatih/molokai'
+
+Plug 'ctrlpvim/ctrlp.vim'
